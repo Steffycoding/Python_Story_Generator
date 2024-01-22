@@ -1,0 +1,24 @@
+import random
+
+def generate_story():
+    # Get user inputs
+    place = input("Enter the name of a place: ")
+    action = input("Enter an action: ")
+    character = input("Enter a character: ")
+    emotion = input("Enter an emotion: ")
+
+    # Lists of possible story elements
+    story_beginning = ["Once upon a time in", "In a faraway land called", "Deep within the heart of"]
+    story_middle = ["a brave", "an adventurous", "a curious"]
+    story_ending = ["went on a journey.", "discovered a hidden treasure.", "made unexpected friends."]
+
+    # Create a random story
+    beginning = random.choice(story_beginning)
+    middle = random.choice(story_middle)
+    ending = random.choice(story_ending)
+
+    # Display the generated story
+    print(f"\n{beginning} {place}, {character} {action} {emotion} with {middle} spirit and {ending}")
+
+if __name__ == "__main__":
+    generate_story()
